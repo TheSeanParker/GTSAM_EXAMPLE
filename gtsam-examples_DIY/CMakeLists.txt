@@ -19,6 +19,9 @@ include_directories(
 # INCLUDE_DIRECTORIES("/usr/include/eigen3")  #include也可以使用绝对路径的形式
 set(GTSAM_LIBRARIES gtsam)   # TODO: automatic search libs
 
+add_executable(Pose2SLAMExample_isam_demo ${CMAKE_SOURCE_DIR}/Pose2SLAMExample_isam_demo.cpp)
+target_link_libraries(Pose2SLAMExample_isam_demo  ${Boost_LIBRARIES}   ${GTSAM_LIBRARIES})
+
 add_executable(Pose2SLAMExpressionExample ${CMAKE_SOURCE_DIR}/Pose2SLAMExpressionExample.cpp )
 target_link_libraries(Pose2SLAMExpressionExample  ${Boost_LIBRARIES}   ${GTSAM_LIBRARIES})
 
